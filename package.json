@@ -1,0 +1,37 @@
+{
+  "name": "passphrase_builder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mischa MacLeod <mischa.macleod@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "autoprefixer": "^9.6.1",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.17",
+    "postcss-cli": "^6.1.2",
+    "rollup": "^1.16.6",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-uglify": "^6.0.2",
+    "rollup-plugin-wasm": "^3.0.0",
+    "serve": "^11.0.2"
+  },
+  "scripts": {
+    "build:js": "rollup -c",
+    "build:rs": "cargo web deploy --release",
+    "build:scss": "node-sass --include-path scss scss/passphrase_builder.scss css/passphrase_builder.css",
+    "build:css": "postcss --use autoprefixer -o static/passphrase_builder.css css/passphrase_builder.css",
+    "build:style": "run-s build:scss build:css",
+    "build:copy": "cp target/deploy/passphrase_builder.css release/ && cp target/deploy/passphrase_builder.wasm release/ && cp target/deploy/index.html release/ release/",
+    "build": "run-s clean:deploy build:rs build:js build:style build:copy",
+    "clean:deploy": "rm -rf /release",
+    "prod": "run-s build serve",
+    "serve": "serve -p 8080 release",
+    "watch:rs": "cargo web start --release",
+    "test": "echo \"Error: no tests!\" && exit 1"
+  }
+}
