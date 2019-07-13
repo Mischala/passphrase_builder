@@ -24,8 +24,7 @@ impl Component for Model {
             words: vec![
                 word::Word::random_word().unwrap(),
                 word::Word::random_word().unwrap(),
-                word::Word::random_word().unwrap(),
-                word::Word::random_word().unwrap(),
+                word::Word::random_word().unwrap()
                 ]
         }
     }
@@ -37,7 +36,9 @@ impl Component for Model {
 
 fn word_view(word: &word::Word) -> Html<Model> {
     html!{
-            { word.to_string() }
+            <div class="word",>
+                { word.to_string() }
+            </div>
     }
 }
 

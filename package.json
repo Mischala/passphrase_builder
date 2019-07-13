@@ -26,9 +26,10 @@
     "build:scss": "node-sass --include-path scss scss/passphrase_builder.scss css/passphrase_builder.css",
     "build:css": "postcss --use autoprefixer -o static/passphrase_builder.css css/passphrase_builder.css",
     "build:style": "run-s build:scss build:css",
-    "build:copy": "cp target/deploy/passphrase_builder.css release/ && cp target/deploy/passphrase_builder.wasm release/ && cp target/deploy/index.html release/ release/",
+    "build:copy": "powershell ./copy.ps1",
     "build": "run-s clean:deploy build:rs build:js build:style build:copy",
-    "clean:deploy": "rm -rf /release",
+
+    "clean:deploy": "rmdir /s release",
     "prod": "run-s build serve",
     "serve": "serve -p 8080 release",
     "watch:rs": "cargo web start --release",

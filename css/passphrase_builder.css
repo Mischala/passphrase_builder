@@ -1,0 +1,7 @@
+.body {
+  background-color: black;
+  color: white; }
+  .body .words {
+    padding: 10px; }
+    .body .words .word {
+      padding-right: 10px; }

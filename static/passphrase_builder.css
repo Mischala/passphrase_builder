@@ -1,0 +1,9 @@
+.body {
+  background-color: black;
+  color: white; }
+  .body .words {
+    padding: 10px; }
+    .body .words .word {
+      padding-right: 10px; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2Nzcy9wYXNzcGhyYXNlX2J1aWxkZXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsdUJBQXVCO0VBQ3ZCLFlBQVksRUFBRTtFQUNkO0lBQ0UsYUFBYSxFQUFFO0lBQ2Y7TUFDRSxtQkFBbUIsRUFBRSIsImZpbGUiOiJwYXNzcGhyYXNlX2J1aWxkZXIuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJvZHkge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgY29sb3I6IHdoaXRlOyB9XG4gIC5ib2R5IC53b3JkcyB7XG4gICAgcGFkZGluZzogMTBweDsgfVxuICAgIC5ib2R5IC53b3JkcyAud29yZCB7XG4gICAgICBwYWRkaW5nLXJpZ2h0OiAxMHB4OyB9XG4iXX0= */

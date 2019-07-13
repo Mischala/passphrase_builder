@@ -1,0 +1,12 @@
+.body {
+    background-color: black;
+    color: white;
+
+    .words {
+        padding: 10px;
+
+        .word {
+            padding-right: 10px;
+        }
+    }
+}
